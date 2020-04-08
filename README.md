@@ -14,7 +14,9 @@ sanity install visual-options
 
 ## Usage
 
-In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum.
+In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component. 
+
+In the example below, which produced the image above, the icons are simple a React component returning an SVG, therefore react-icons should work here too.
 
 ```javascript
 {
