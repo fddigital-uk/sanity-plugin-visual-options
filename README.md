@@ -16,7 +16,7 @@ sanity install visual-options
 
 In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component. 
 
-In the example below, which produced the image above, the icons are simple a React component returning an SVG, therefore react-icons should work here too.
+In the example below, which produced the image above, the icons are simple React components returning an SVG, therefore react-icons should work here too.
 
 ```javascript
 {
@@ -62,5 +62,6 @@ In the example below, which produced the image above, the icons are simple a Rea
 
 ## Future Development/Considerations
 
-- Allow items multi selections with limits e.g. maximum of two
+- Allow items multi selections with limits e.g. maximum of two.
 - Add a check mark to show selection and allow de-selection (moving of radio to checkboxes also solving the above item).
+- Implement small and medium sized box options.
