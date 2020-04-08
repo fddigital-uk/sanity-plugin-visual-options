@@ -1,0 +1,40 @@
+{
+  "name": "sanity-plugin-visual-options",
+  "version": "0.6.0",
+  "description": "A custom input for options to user by displaying a visual representation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fractaldimensions/sanity-plugin-visual-options.git"
+  },
+  "keywords": [
+    "sanity",
+    "options",
+    "visual",
+    "display",
+    "sanityio",
+    "sanity.io",
+    "list"
+  ],
+  "author": "Nick Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fractaldimensions/sanity-plugin-visual-options/issues"
+  },
+  "homepage": "https://github.com/fractaldimensions/sanity-plugin-visual-options#readme",
+  "peerDependencies": {
+    "@sanity/components": "^1.149.6",
+    "prop-types": "^15.6",
+    "react": "^16.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^6.8.0"
+  }
+}

@@ -18,7 +18,9 @@ class VisualOptions extends React.Component {
               <VisualOptionsItem
                 key={k}
                 {...options[k]}
-                selected={k == value}
+                selected={
+                  k == value || (options[k].default && value == undefined)
+                }
                 ref={element =>
                   !this.inputElement &&
                   (k == value || (value == undefined && i == 0))

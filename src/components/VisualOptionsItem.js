@@ -13,14 +13,15 @@ class VisualOptionsItem extends React.Component {
       <div
         className={`${styles.item} ${selected ? styles.selected : ""}`}
         onClick={e => {
-          e.preventDefault();
+          e.preventDefault()
           onChange()
+          this.focus()
         }}
       >
         <div className={styles.icon}>
           <Icon />
         </div>
-        <small>{name}</small>
+        {name && <small>{name}</small>}
         <input
           type="radio"
           name={fieldName}
