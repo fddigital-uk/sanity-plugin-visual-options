@@ -1,5 +1,7 @@
 # Change Log
 
+Notable changes are within this log. Not all patch releases will be detailed, see commit history for a greater insight.
+
 ## 0.7.0 - 9th April 2020
 
 Last of stability issues resolved.
