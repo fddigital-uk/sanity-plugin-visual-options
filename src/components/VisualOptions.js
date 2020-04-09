@@ -21,6 +21,7 @@ class VisualOptions extends React.Component {
                 selected={
                   k == value || (options[k].default && value == undefined)
                 }
+                value={k}
                 ref={element =>
                   !this.inputElement &&
                   (k == value || (value == undefined && i == 0))

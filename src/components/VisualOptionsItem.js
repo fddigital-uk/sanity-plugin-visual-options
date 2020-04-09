@@ -7,14 +7,21 @@ class VisualOptionsItem extends React.Component {
   }
 
   render() {
-    const { fieldName, name, selected, onChange, icon: Icon } = this.props
+    const {
+      fieldName,
+      name,
+      value,
+      selected,
+      onChange,
+      icon: Icon,
+    } = this.props
 
     return (
       <div
         className={`${styles.item} ${selected ? styles.selected : ""}`}
         onClick={e => {
+          this.inputElement.click()
           e.preventDefault()
-          onChange()
           this.focus()
         }}
       >
@@ -26,9 +33,10 @@ class VisualOptionsItem extends React.Component {
           type="radio"
           name={fieldName}
           aria-label={name}
-          checked={selected}
+          defaultChecked={selected}
+          value={value}
           className={styles.hidden}
-          onChange={() => null}
+          onClick={onChange}
           ref={element =>
             !this.inputElement ? (this.inputElement = element) : null
           }
