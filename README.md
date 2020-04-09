@@ -69,3 +69,7 @@ In the example below, which produced the image above, the icons are simple React
 - Allow items multi selections with limits e.g. maximum of two.
 - Add a check mark to show selection and allow de-selection (moving of radio to checkboxes also solving the above item).
 - Implement small and medium sized box options.
+- Allow standard images to be displayed rather than just SVGs.
+
+[npm-image]: https://img.shields.io/npm/v/sanity-plugin-visual-options.svg
+[npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
