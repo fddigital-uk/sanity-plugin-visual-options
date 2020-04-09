@@ -1,5 +1,7 @@
 # Sanity Visual Option List
 
+_For notable updates and bug fixes see [change log](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/master/CHANGELOG.md)_
+
 A visual way to show options to users, for example, what layout to apply for a text/image component:
 
 ![preview image](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png)
