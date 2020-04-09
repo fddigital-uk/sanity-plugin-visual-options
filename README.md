@@ -1,6 +1,7 @@
 # Sanity Visual Option List
 
 [![NPM Version][npm-image]][npm-url]
+[![NPM Version][npm-dl-image]][npm-url]
 
 _For notable updates and bug fixes see [change log](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/master/CHANGELOG.md)_
 
@@ -71,5 +72,6 @@ In the example below, which produced the image above, the icons are simple React
 - Implement small and medium sized box options.
 - Allow standard images to be displayed rather than just SVGs.
 
-[npm-image]: https://img.shields.io/npm/v/sanity-plugin-visual-options.svg
+[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options
 [npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
+[npm-dl-image]: https://badgen.net/npm/dt/sanity-plugin-visual-options
