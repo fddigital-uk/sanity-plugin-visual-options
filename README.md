@@ -74,6 +74,6 @@ In the example below, which produced the image above, the icons are simple React
 - Implement small and medium sized box options.
 - Allow standard images to be displayed rather than just SVGs.
 
-[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?0.7.3
+[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?202004091454
 [npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
 [npm-dl-image]: https://badgen.net/npm/dt/sanity-plugin-visual-options
