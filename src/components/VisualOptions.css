@@ -7,8 +7,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: var(--medium-padding);
+
+  @media (--min-medium) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .item {
