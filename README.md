@@ -1,5 +1,7 @@
 # Sanity Visual Option List
 
+[![NPM Version][npm-image]][npm-url]
+
 _For notable updates and bug fixes see [change log](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/master/CHANGELOG.md)_
 
 A visual way to show options to users, for example, what layout to apply for a text/image component:
