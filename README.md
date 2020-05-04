@@ -7,11 +7,11 @@ _For notable updates and bug fixes see [change log](https://github.com/fractaldi
 
 A visual way to show options to users, for example, what layout to apply for a text/image component (default layout):
 
-<img alt="preview of default" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png" style="max-width: 530px">
+<img alt="preview of default" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png" style="width: 530px; max-width: 100%;">
 
 Or with tooltip, and as smaller icons:
 
-<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="max-width: 530px">
+<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="width: 530px; max-width: 100%;">
 
 ## Installation
 
@@ -85,15 +85,15 @@ Within the `options` for the schema, there are the following options:
 
 ## Small 
 
-<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="max-width: 530px">
+<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="width: 530px; max-width: 100%;">
 
 ## Medium
 
-<img alt="preview of medium (default) with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-medium.png" style="max-width: 530px">
+<img alt="preview of medium (default) with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-medium.png" style="width: 530px; max-width: 100%;">
 
 ## Large
 
-<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-large.png" style="max-width: 530px">
+<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-large.png" style="width: 530px; max-width: 100%;">
 
 
 ## Future Development/Considerations
