@@ -8,12 +8,13 @@ class VisualOptions extends React.Component {
   }
 
   render() {
-    const { options, value, onChange } = this.props
+    const { options, value, size = "", showLabel, showTooltip, onChange } = this.props
+    const extraClasses = (size.toLowerCase() == "large" || size.toLowerCase() == "small") ? size.toLowerCase() : null;
 
     return (
       <div className={styles.container}>
         {options && (
-          <div className={styles.grid}>
+          <div className={`${styles.grid} ${extraClasses ? styles[extraClasses] : ""}`}>
             {Object.keys(options).map((k, i) => (
               <VisualOptionsItem
                 key={k}
@@ -21,6 +22,8 @@ class VisualOptions extends React.Component {
                 selected={
                   k == value || (options[k].default && value == undefined)
                 }
+                showLabel={showLabel}
+                showLabelAsTooltip={showTooltip}
                 value={k}
                 ref={element =>
                   !this.inputElement &&

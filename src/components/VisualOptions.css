@@ -11,21 +11,55 @@
   grid-gap: var(--medium-padding);
 
   @media (--min-medium) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.small {
+    grid-gap: var(--extra-small-padding);
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (--min-medium) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &.large {
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (--min-medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
 .item {
   position: relative;
-  padding: var(--small-padding);
+  padding: var(--extra-small-padding);
   border-radius: var(--border-radius-large);
   border: 1px solid var(--hairline-color);
   box-sizing: border-box;
   cursor: pointer;
 
+  & .icon {
+    min-height: calc(var(--large-padding) * 4);
+  }
+
   & > small {
     display: block;
     text-align: center;
+  }
+}
+
+.grid.small {
+  & .icon {
+    min-height: calc(var(--medium-padding) * 4);
+    padding: var(--small-padding);
+  }
+}
+
+.grid.large {
+  & .icon {
+    min-height: calc(var(--large-padding) * 6);
   }
 }
 
@@ -42,7 +76,7 @@
   display: grid;
   align-items: center;
   padding: var(--medium-padding);
-  height: 60px;
+  box-sizing: border-box;
 
   & > * {
     height: 100%;
@@ -50,11 +84,57 @@
   }
 }
 
+.tip {
+  text-align: center;
+  line-height: 1.1;
+  padding: var(--small-padding);
+  padding-top: 0;
+}
+
 .name {
   text-align: center;
 }
 
-.image {
+.tooltip {
+  position: relative;
+
+  & small {
+    background-color: var(--brand-primary);
+    padding: var(--small-padding);
+    border-radius: 5px;
+    color: var(--brand-primary--inverted);
+  }
+
+  & .tip {
+    padding: 0;
+    display: none;
+  }
+
+  &.over .tip {
+    position: absolute;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    & small {
+      position: absolute;
+      box-sizing: border-box;
+      left: calc(var(--small-padding) * -1);
+      top: var(--small-padding);
+      width: calc(100% + var(--small-padding));
+      z-index: 500;
+
+      &:before {
+        position: absolute;
+        top: -5px;
+        left: calc(50% - 5px);
+        border: solid var(--brand-primary);
+        border-width: 0 10px 10px 0;
+        transform: rotate(-135deg);
+        content: " ";
+      }
+    }
+  }
 }
 
 .selected {
@@ -65,6 +145,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 3px solid var(--hairline-color);
+    border: 2px solid var(--brand-primary);
+    border-radius: var(--border-radius-large);
   }
 }

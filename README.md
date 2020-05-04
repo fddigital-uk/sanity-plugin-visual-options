@@ -5,9 +5,13 @@
 
 _For notable updates and bug fixes see [change log](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/master/CHANGELOG.md)_
 
-A visual way to show options to users, for example, what layout to apply for a text/image component:
+A visual way to show options to users, for example, what layout to apply for a text/image component (default layout):
 
-![preview image](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png)
+<img alt="preview of default" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png" style="max-width: 530px">
+
+Or with tooltip, and as smaller icons:
+
+<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="max-width: 530px">
 
 ## Installation
 
@@ -23,7 +27,7 @@ Schema to produce the above screenshot can be found [here](https://github.com/fr
 
 In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component. 
 
-In the example below, which produced the image above, the icons are simple React components returning an SVG, therefore react-icons should work here too.
+In the example below, which produced the image above with small options, the icons are simple React components returning an SVG, therefore react-icons should work here too.
 
 ```javascript
 {
@@ -34,6 +38,8 @@ In the example below, which produced the image above, the icons are simple React
       title: "Block Layout",
       type: "visualOptions",
       options: {
+        showTooltip: true,
+        optionSize: "small",
         list: {
           left: {
             name: "Text Left / Image Right",
@@ -67,13 +73,35 @@ In the example below, which produced the image above, the icons are simple React
 }
 ```
 
+## Options
+
+Within the `options` for the schema, there are the following options:
+
+- `showLabels: (true|false)` - Sets whether to show the labels for each item based on their name.
+- `showTooltip: (true|false)` - The name of the item will be turned into a tooltip and displayed on hover. Overrides `showLabels` above.
+- `optionSize: ("small"|"medium"|"large")` - Sets the size of the option items. Defaults to "medium" if omitted or and invalid option is provided.
+
+## Layout Options
+
+## Small 
+
+<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="max-width: 530px">
+
+## Medium
+
+<img alt="preview of medium (default) with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-medium.png" style="max-width: 530px">
+
+## Large
+
+<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-large.png" style="max-width: 530px">
+
+
 ## Future Development/Considerations
 
 - Allow items multi selections with limits e.g. maximum of two.
 - Add a check mark to show selection and allow de-selection (moving of radio to checkboxes also solving the above item).
-- Implement small and medium sized box options.
 - Allow standard images to be displayed rather than just SVGs.
 
-[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?0.7.5
+[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?0.7.7
 [npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
 [npm-dl-image]: https://badgen.net/npm/dt/sanity-plugin-visual-options
