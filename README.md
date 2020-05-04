@@ -7,7 +7,7 @@ _For notable updates and bug fixes see [change log](https://github.com/fractaldi
 
 A visual way to show options to users, for example, what layout to apply for a text/image component (default layout):
 
-<img alt="preview of default" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png" style="width: 530px; max-width: 100%;">
+![preview of default](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview.png | width=530)
 
 Or with tooltip, and as smaller icons:
 
