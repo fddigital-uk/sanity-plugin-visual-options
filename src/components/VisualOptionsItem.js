@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./VisualOptions.css"
-import { createBuilderStatusReporter } from "typescript"
 
 class VisualOptionsItem extends React.Component {
   constructor(props) {
