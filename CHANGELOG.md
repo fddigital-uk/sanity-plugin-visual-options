@@ -2,6 +2,10 @@
 
 Notable changes are within this log. Not all patch releases will be detailed, see commit history for a greater insight.
 
+## 0.8.2 - 28th May 2020
+
+- Removes unncecessary dependency 'typescript'
+
 ## 0.8.0 - 4th May 2020
 
 ### Features 
