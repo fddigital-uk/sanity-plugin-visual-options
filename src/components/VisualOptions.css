@@ -1,3 +1,4 @@
+@import "./VisualOptionsScreen.css";
 @import "part:@sanity/base/theme/variables-style";
 
 .error {
@@ -10,7 +11,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--medium-padding);
 
-  @media (--min-medium) {
+  @media (--screen-medium) {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -18,7 +19,7 @@
     grid-gap: var(--extra-small-padding);
     grid-template-columns: repeat(4, 1fr);
 
-    @media (--min-medium) {
+    @media (--screen-medium) {
       grid-template-columns: repeat(6, 1fr);
     }
   }
@@ -26,7 +27,7 @@
   &.large {
     grid-template-columns: repeat(1, 1fr);
 
-    @media (--min-medium) {
+    @media (--screen-medium) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

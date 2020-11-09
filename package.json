@@ -1,10 +1,10 @@
 {
   "name": "sanity-plugin-visual-options",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "A custom input for options to user by displaying a visual representation.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib --copy-files",
+    "build": "babel src -d lib --copy-files && cp ./src/components/VisualOptionsScreen.css ./lib/components/",
     "test": "jest"
   },
   "repository": {

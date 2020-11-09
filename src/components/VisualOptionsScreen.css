@@ -1,0 +1,2 @@
+/* Support for Sanity < v2.0 - variable rename from --min-medium to --screen-medium */
+@custom-media --screen-medium (min-width: 512px);
