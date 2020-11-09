@@ -1,5 +1,8 @@
 .idea/
+.vscode/
 .DS_Store
+.prettierrc
+.babelrc
 /src
 /example
 /node_modules
