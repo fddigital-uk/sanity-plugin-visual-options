@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-visual-options",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom input for options to user by displaying a visual representation.",
   "main": "lib/index.js",
   "scripts": {
@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/fractaldimensions/sanity-plugin-visual-options#readme",
   "peerDependencies": {
-    "@sanity/base": ">1.149.10 || >2.0 <3.0",
-    "@sanity/components": ">1.149.10 || >2.0 <3.0",
+    "@sanity/base": ">1.149.10 || >=2.0 <3.0",
+    "@sanity/components": ">1.149.10 || >=2.0 <3.0",
     "prop-types": "^15.6",
     "react": "^16.2 || ^17.0"
   },

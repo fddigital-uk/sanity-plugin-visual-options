@@ -13,6 +13,13 @@ Or with tooltip, and as smaller icons:
 
 <img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-small.png" style="width: 530px; max-width: 100%;">
 
+Or, also for color options:
+
+<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-color-list.png" style="width: 530px; max-width: 100%;">
+
+See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/master/examples/color-list.js) for how to implement a color list.
+
+
 ## Installation
 
 From the terminal within the Sanity Studio directory:
@@ -81,6 +88,7 @@ Within the `options` for the schema, there are the following options:
 - `showLabels: (true|false)` - Sets whether to show the labels for each item based on their name.
 - `showTooltip: (true|false)` - The name of the item will be turned into a tooltip and displayed on hover. Overrides `showLabels` above.
 - `optionSize: ("small"|"medium"|"large")` - Sets the size of the option items. Defaults to "medium" if omitted or and invalid option is provided.
+- `shape: ("circle"|"box")` - Optional, if omitted, default will be "box".
 
 ## Layout Options
 
@@ -96,13 +104,12 @@ Within the `options` for the schema, there are the following options:
 
 <img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/master/images/preview-large.png" style="width: 530px; max-width: 100%;">
 
-
 ## Future Development/Considerations
 
 - Allow items multi selections with limits e.g. maximum of two.
 - Add a check mark to show selection and allow de-selection (moving of radio to checkboxes also solving the above item).
 - Allow standard images to be displayed rather than just SVGs.
 
-[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?0.8.4
+[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?1.0.1
 [npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
 [npm-dl-image]: https://badgen.net/npm/dt/sanity-plugin-visual-options
