@@ -1,5 +1,6 @@
 import React from "react";
 
+// Color list that can be stored centrally or generated from another document
 const colorList = [
   {
     key: "one",
@@ -23,6 +24,7 @@ const colorList = [
   }
 ];
 
+// Component to appear inside the option list
 const Color = (color) => {
   return () => <div
     style={{
@@ -31,6 +33,7 @@ const Color = (color) => {
   />
 }
 
+// Create option list using a combination of Color component and the color list.
 const colors = Object.assign(
   {},
   ...colorList.map((c) => ({
@@ -41,6 +44,7 @@ const colors = Object.assign(
   }))
 );
 
+// Standard schema settings
 export default {
   name: "colorList",
   title: "Colour",
@@ -49,6 +53,6 @@ export default {
     showTooltip: false,
     optionSize: "small",
     shape: "circle",
-    list: colors,
+    list: colors, // Set color options as list
   }
 }
