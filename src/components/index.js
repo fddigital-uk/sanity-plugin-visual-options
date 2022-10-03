@@ -30,6 +30,7 @@ class VisualOptionsContainer extends React.Component {
           showLabel={type.options.showLabel}
           showTooltip={type.options.showTooltip}
           size={type.options.optionSize}
+          shape={type.options.shape}
           value={value}
           ref={element =>
             !this.inputElement ? (this.inputElement = element) : null

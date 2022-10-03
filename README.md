@@ -31,8 +31,8 @@ In the example below, which produced the image above with small options, the ico
 
 ```javascript
 {
-    ...,
-    fields: [
+  ...,
+  fields: [
     {
       name: "blockLayout",
       title: "Block Layout",
@@ -70,6 +70,7 @@ In the example below, which produced the image above with small options, the ico
       },
     },
     ...
+  ],
 }
 ```
 

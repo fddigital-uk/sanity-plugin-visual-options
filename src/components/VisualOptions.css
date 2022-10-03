@@ -51,6 +51,34 @@
   }
 }
 
+.grid:not(.circle):not(.tooltip) {
+  & .item {
+    display: flex;
+    flex-direction: column;
+
+    & .icon {
+      flex-grow: 1;
+    }
+  }
+}
+
+.grid.circle, .grid.circle.small, .grid.circle.large {
+  & .item {
+    border-radius: 50%;
+
+    &:before {
+      border-radius: 50%;
+      border-width: 3px;
+    }
+  }
+
+  & .icon {
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
 .grid.small {
   & .icon {
     min-height: calc(var(--medium-padding) * 4);
@@ -61,6 +89,38 @@
 .grid.large {
   & .icon {
     min-height: calc(var(--large-padding) * 6);
+  }
+}
+
+.grid.circle {
+  display: block;
+
+  & .item {
+    float: left;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+
+    &:not(.tooltip) .tip {
+      display: none;
+    }
+
+    & .icon {
+      width: 100%;
+      min-height: auto;
+    }
+  }
+
+  &.large .item {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  &.small .item {
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -96,14 +156,17 @@
   text-align: center;
 }
 
+
+
+
 .tooltip {
   position: relative;
 
   & small {
     background-color: var(--brand-primary);
+    color: var(--brand-primary--inverted);
     padding: var(--small-padding);
     border-radius: 5px;
-    color: var(--brand-primary--inverted);
   }
 
   & .tip {
@@ -113,17 +176,21 @@
 
   &.over .tip {
     position: absolute;
-    display: block;
-    width: 100%;
+    display: flex;
+    width: calc(100% - 0.5rem);
     box-sizing: border-box;
+    bottom: 0;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
 
     & small {
-      position: absolute;
+      position: relative;
       box-sizing: border-box;
-      left: calc(var(--small-padding) * -1);
-      top: var(--small-padding);
-      width: calc(100% + var(--small-padding));
       z-index: 500;
+      transform: translateY(calc(100% + 0.25rem));
 
       &:before {
         position: absolute;

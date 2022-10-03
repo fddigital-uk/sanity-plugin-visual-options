@@ -8,13 +8,23 @@ class VisualOptions extends React.Component {
   }
 
   render() {
-    const { options, value, size = "", showLabel, showTooltip, onChange } = this.props
-    const extraClasses = (size.toLowerCase() == "large" || size.toLowerCase() == "small") ? size.toLowerCase() : null;
+    const { shape = "", options, value, size = "", showLabel, showTooltip, onChange } = this.props
+
+    const extraClasses = [];
+
+    if (["large", "small", "tiny"].indexOf(size.toLowerCase()) > -1) {
+      extraClasses.push(styles[size.toLowerCase()]);
+    }
+
+    if (shape) {
+      extraClasses.push(styles[shape.toLowerCase()]);
+    }
+
 
     return (
       <div className={styles.container}>
         {options && (
-          <div className={`${styles.grid} ${extraClasses ? styles[extraClasses] : ""}`}>
+          <div className={`${styles.grid} ${extraClasses.join(" ")}`}>
             {Object.keys(options).map((k, i) => (
               <VisualOptionsItem
                 key={k}
