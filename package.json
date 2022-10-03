@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-visual-options",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A custom input for options to user by displaying a visual representation.",
   "main": "lib/index.js",
   "scripts": {
