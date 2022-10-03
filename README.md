@@ -110,6 +110,6 @@ Within the `options` for the schema, there are the following options:
 - Add a check mark to show selection and allow de-selection (moving of radio to checkboxes also solving the above item).
 - Allow standard images to be displayed rather than just SVGs.
 
-[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?1.0.1
+[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?1.0.2
 [npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
 [npm-dl-image]: https://badgen.net/npm/dt/sanity-plugin-visual-options
