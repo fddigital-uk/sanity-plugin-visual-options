@@ -43,10 +43,6 @@
 
   & .icon {
     min-height: calc(var(--large-padding) * 4);
-
-    img {
-      object-fit: contain;
-    }
   }
 
   & > small {
@@ -146,6 +142,10 @@
   & > * {
     height: 100%;
     width: 100%;
+  }
+
+  & > img {
+    object-fit: contain;
   }
 }
 
