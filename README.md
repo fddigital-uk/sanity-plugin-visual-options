@@ -20,7 +20,7 @@ Or, also for color options:
 
 <img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview-color-list.png" style="width: 530px; max-width: 100%;">
 
-See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/color-list.js) for how to implement a color list.
+See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/color-list.jsx) for how to implement a color list.
 
 
 ## Installation
@@ -28,16 +28,31 @@ See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visua
 From the terminal within the Sanity Studio directory:
 
 ```
-sanity install visual-options
+npm install sanity-plugin-visual-options@next
+```
+
+Then add the plugin to your sanity.config.js/ts file:
+
+```javascript
+import { visualOptions } from "sanity-plugin-visual-options";
+
+export default defineConfig({
+  // ...
+  plugins: [
+    visualOptions(),
+  ]
+})
 ```
 
 ## Usage
 
-Schema to produce the above screenshot can be found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/hero-schema.js) with the icons found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/icons.js)
+Schema to produce the above screenshot can be found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/hero-schema.js) with the icons found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/icons.jsx)
 
 In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component. 
 
 In the example below, which produced the image above with small options, the icons are simple React components returning an SVG, therefore react-icons should work here too.
+
+_*NOTE: As of Sanity Studio V3 when using React within a schema the schema file must have the extension jsx or tsx not js/ts*_
 
 ```javascript
 {
@@ -113,6 +128,6 @@ Within the `options` for the schema, there are the following options:
 - Add a check mark to show selection and allow de-selection (moving of radio to checkboxes also solving the above item).
 - Allow standard images to be displayed rather than just SVGs.
 
-[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?1.0.2
+[npm-image]: https://badgen.net/npm/v/sanity-plugin-visual-options?2.0.0-beta.1
 [npm-url]: https://npmjs.org/package/sanity-plugin-visual-options
 [npm-dl-image]: https://badgen.net/npm/dt/sanity-plugin-visual-options
