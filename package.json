@@ -4,7 +4,7 @@
   "description": "A custom input for options to user by displaying a visual representation.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib --copy-files && cp ./src/components/VisualOptionsScreen.css ./lib/components/",
+    "build": "babel src -d lib --copy-files && cp src/components/VisualOptionsScreen.module.css ./lib/components/",
     "test": "jest"
   },
   "repository": {
@@ -29,20 +29,17 @@
   },
   "homepage": "https://github.com/fractaldimensions/sanity-plugin-visual-options#readme",
   "peerDependencies": {
-    "sanity": "^3.0.0-dev-preview.20",
     "prop-types": "^15.6",
-    "react": "^16.2 || ^17.0 || ^18.0"
+    "react": "^16.2 || ^17.0 || ^18",
+    "sanity": "^3.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-syntax-class-properties": "^6.13.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
     "eslint": "^4.3.0",
     "eslint-config-sanity": "^2.1.4",
-    "eslint-plugin-react": "^7.1.0",
-    "jest": "^25.5.4"
+    "eslint-plugin-react": "^7.1.0"
   }
 }

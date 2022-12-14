@@ -1,7 +1,6 @@
-import React from "react";
+import React from "react"
 import PropTypes from "prop-types"
-import PatchEvent, { set, unset } from "part:@sanity/form-builder/patch-event"
-import FormField from "part:@sanity/components/formfields/default"
+import { FormField, PatchEvent, set, unset } from "sanity"
 import VisualOptions from "./VisualOptions"
 
 const createPatchFrom = value =>
@@ -17,7 +16,8 @@ class VisualOptionsContainer extends React.Component {
   }
 
   render() {
-    const { value, type, level } = this.props
+    const { value, schemaType: type, level } = this.props
+    console.log(this.props)
 
     return (
       <FormField
@@ -45,7 +45,7 @@ class VisualOptionsContainer extends React.Component {
 VisualOptionsContainer.propTypes = {
   value: PropTypes.string,
   options: PropTypes.shape({
-    list: PropTypes.object
+    list: PropTypes.object,
   }),
   onChange: PropTypes.func.isRequired,
 }
