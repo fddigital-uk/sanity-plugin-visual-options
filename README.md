@@ -6,21 +6,21 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Version][npm-dl-image]][npm-url]
 
-_For notable updates and bug fixes see [change log](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/CHANGELOG.md)_
+_For notable updates and bug fixes see [change log](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/CHANGELOG.md)_
 
 A visual way to show options to users, for example, what layout to apply for a text/image component (default layout):
 
-![preview of default](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview.png)
+![preview of default](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview.png)
 
 Or with tooltip, and as smaller icons:
 
-<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview-small.png" style="width: 530px; max-width: 100%;">
+<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-small.png" style="width: 530px; max-width: 100%;">
 
 Or, also for color options:
 
-<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview-color-list.png" style="width: 530px; max-width: 100%;">
+<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-color-list.png" style="width: 530px; max-width: 100%;">
 
-See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/color-list.jsx) for how to implement a color list.
+See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/color-list.jsx) for how to implement a color list.
 
 
 ## Installation
@@ -46,7 +46,7 @@ export default defineConfig({
 
 ## Usage
 
-Schema to produce the above screenshot can be found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/hero-schema.js) with the icons found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/trunk/examples/icons.jsx)
+Schema to produce the above screenshot can be found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/hero-schema.js) with the icons found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/icons.jsx)
 
 In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component. 
 
@@ -112,15 +112,15 @@ Within the `options` for the schema, there are the following options:
 
 ## Small 
 
-<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview-small.png" style="width: 530px; max-width: 100%;">
+<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-small.png" style="width: 530px; max-width: 100%;">
 
 ## Medium
 
-<img alt="preview of medium (default) with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview-medium.png" style="width: 530px; max-width: 100%;">
+<img alt="preview of medium (default) with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-medium.png" style="width: 530px; max-width: 100%;">
 
 ## Large
 
-<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/trunk/images/preview-large.png" style="width: 530px; max-width: 100%;">
+<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-large.png" style="width: 530px; max-width: 100%;">
 
 ## Future Development/Considerations
 
