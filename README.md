@@ -1,7 +1,7 @@
 # Sanity Visual Option List
 
 > This is a **Sanity Studio v3** plugin.
-> For the v2 version, please refer to the [v2-branch](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/studio-v2/).
+> For the v2 version, please refer to the [v2-branch](https://github.com/fractaldimensions/sanity-plugin-visual-options/tree/studio-v2/).
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Version][npm-dl-image]][npm-url]
