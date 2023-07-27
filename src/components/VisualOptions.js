@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./VisualOptions.css"
+import styles from "./VisualOptions.module.css"
 import VisualOptionsItem from "./VisualOptionsItem"
 
 class VisualOptions extends React.Component {
