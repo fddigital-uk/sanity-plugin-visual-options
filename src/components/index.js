@@ -1,10 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { FormField, PatchEvent, set, unset } from "sanity"
+import { FormField, set, unset } from "sanity"
 import VisualOptions from "./VisualOptions"
 
-const createPatchFrom = value =>
-  PatchEvent.from(value === "" ? unset() : set(value))
+const createPatchFrom = value => {
+  if (value === "") {
+    return unset()
+  }
+  return set(value)
+}
 
 class VisualOptionsContainer extends React.Component {
   focus() {
