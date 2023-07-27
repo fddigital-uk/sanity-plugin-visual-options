@@ -25,7 +25,7 @@ See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visua
 From the terminal within the Sanity Studio directory:
 
 ```
-sanity install visual-options
+sanity install visual-options@studio-v2
 ```
 
 ## Usage
