@@ -14,11 +14,11 @@ A visual way to show options to users, for example, what layout to apply for a t
 
 Or with tooltip, and as smaller icons:
 
-<img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-small.png" style="width: 530px; max-width: 100%;">
+![preview of small with tooltip](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-small.png)
 
 Or, also for color options:
 
-<img alt="preview of large with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-color-list.png" style="width: 530px; max-width: 100%;">
+![preview of large with tooltip](https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-color-list.png)
 
 See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/color-list.jsx) for how to implement a color list.
 
