@@ -28,7 +28,7 @@ See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visua
 From the terminal within the Sanity Studio directory:
 
 ```
-npm install sanity-plugin-visual-options@next
+npm install sanity-plugin-visual-options
 ```
 
 Then add the plugin to your sanity.config.js/ts file:
