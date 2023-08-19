@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "eslint": "^4.3.0",
-    "eslint-config-sanity": "^2.1.4",
+    "eslint-config-sanity": "^6.0.0",
     "eslint-plugin-react": "^7.1.0"
   }
 }
