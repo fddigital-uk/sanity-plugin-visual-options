@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-visual-options",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A custom input for options to user by displaying a visual representation.",
   "main": "lib/index.js",
   "scripts": {
@@ -34,11 +34,11 @@
     "sanity": "^3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "eslint": "^4.3.0",
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "eslint": "^8.47.0",
     "eslint-config-sanity": "^6.0.0",
     "eslint-plugin-react": "^7.1.0"
   }
