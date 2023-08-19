@@ -21,7 +21,6 @@ class VisualOptionsContainer extends React.Component {
 
   render() {
     const { value, schemaType: type, level } = this.props
-    console.log(this.props)
 
     return (
       <FormField
