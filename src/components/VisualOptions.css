@@ -1,4 +1,4 @@
-@import "VisualOptionsScreen.module.css";
+@import "VisualOptionsScreen.css";
 
 .container {
   --state-danger-color: maroon;

@@ -1,13 +1,15 @@
-import React from "react"
-import styles from "./VisualOptions.module.css"
+import React from 'react'
+import styles from './VisualOptions.css'
 
 class VisualOptionsItem extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { over: false }
+    this.state = {over: false}
   }
   focus() {
-    this.inputElement ? this.inputElement.focus() : null
+    if (this.inputElement) {
+      this.inputElement.focus()
+    }
   }
 
   render() {
@@ -24,12 +26,12 @@ class VisualOptionsItem extends React.Component {
 
     return (
       <div
-        className={`${styles.item} ${showLabelAsTooltip ? styles.tooltip : ""} ${selected ? styles.selected : ""} ${
-          this.state.over ? styles.over : ""
-        }`}
-        onMouseOver={() => this.setState({ over: true })}
-        onMouseOut={() => this.setState({ over: false })}
-        onClick={e => {
+        className={`${styles.item} ${showLabelAsTooltip ? styles.tooltip : ''} ${
+          selected ? styles.selected : ''
+        } ${this.state.over ? styles.over : ''}`}
+        onMouseOver={() => this.setState({over: true})}
+        onMouseOut={() => this.setState({over: false})}
+        onClick={(e) => {
           this.inputElement.click()
           e.preventDefault()
           this.focus()
@@ -38,7 +40,11 @@ class VisualOptionsItem extends React.Component {
         <div className={styles.icon}>
           <Icon />
         </div>
-        {(showLabel || showLabelAsTooltip) && name && <div className={styles.tip}><small>{name}</small></div>}
+        {(showLabel || showLabelAsTooltip) && name && (
+          <div className={styles.tip}>
+            <small>{name}</small>
+          </div>
+        )}
         <input
           type="radio"
           name={fieldName}
@@ -47,9 +53,7 @@ class VisualOptionsItem extends React.Component {
           value={value}
           className={styles.hidden}
           onClick={onChange}
-          ref={element =>
-            !this.inputElement ? (this.inputElement = element) : null
-          }
+          ref={(element) => (this.inputElement ? null : (this.inputElement = element))}
         />
       </div>
     )
