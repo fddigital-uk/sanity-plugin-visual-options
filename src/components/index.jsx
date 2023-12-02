@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { FormField, set, unset } from "sanity"
-import VisualOptions from "./VisualOptions"
+import React from 'react'
+import PropTypes from 'prop-types'
+import {FormField, set, unset} from 'sanity'
+import VisualOptions from './VisualOptions'
 
-const createPatchFrom = value => {
-  if (value === "") {
+const createPatchFrom = (value) => {
+  if (value === '') {
     return unset()
   }
   return set(value)
@@ -12,7 +12,9 @@ const createPatchFrom = value => {
 
 class VisualOptionsContainer extends React.Component {
   focus() {
-    this.inputElement ? this.inputElement.focus() : null
+    if (this.inputElement) {
+      this.inputElement.focus()
+    }
   }
 
   selectItem(item) {
@@ -20,11 +22,11 @@ class VisualOptionsContainer extends React.Component {
   }
 
   render() {
-    const { value, schemaType: type, level } = this.props
+    const {value, schemaType: type, level} = this.props
 
     return (
       <FormField
-        label={type.title ? type.title : ""}
+        label={type.title ? type.title : ''}
         description={type.description ? type.description : null}
         level={level}
       >
@@ -35,10 +37,8 @@ class VisualOptionsContainer extends React.Component {
           size={type.options.optionSize}
           shape={type.options.shape}
           value={value}
-          ref={element =>
-            !this.inputElement ? (this.inputElement = element) : null
-          }
-          onChange={item => this.selectItem(item)}
+          ref={(element) => (this.inputElement ? null : (this.inputElement = element))}
+          onChange={(item) => this.selectItem(item)}
         />
       </FormField>
     )
