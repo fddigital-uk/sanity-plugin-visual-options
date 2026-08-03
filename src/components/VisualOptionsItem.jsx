@@ -1,17 +1,8 @@
 import React from 'react'
+
 import styles from './VisualOptions.css'
 
 class VisualOptionsItem extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {over: false}
-  }
-  focus() {
-    if (this.inputElement) {
-      this.inputElement.focus()
-    }
-  }
-
   render() {
     const {
       fieldName,
@@ -25,17 +16,10 @@ class VisualOptionsItem extends React.Component {
     } = this.props
 
     return (
-      <div
+      <label
         className={`${styles.item} ${showLabelAsTooltip ? styles.tooltip : ''} ${
           selected ? styles.selected : ''
-        } ${this.state.over ? styles.over : ''}`}
-        onMouseOver={() => this.setState({over: true})}
-        onMouseOut={() => this.setState({over: false})}
-        onClick={(e) => {
-          this.inputElement.click()
-          e.preventDefault()
-          this.focus()
-        }}
+        }`}
       >
         <div className={styles.icon}>
           <Icon />
@@ -53,9 +37,8 @@ class VisualOptionsItem extends React.Component {
           value={value}
           className={styles.hidden}
           onClick={onChange}
-          ref={(element) => (this.inputElement ? null : (this.inputElement = element))}
         />
-      </div>
+      </label>
     )
   }
 }

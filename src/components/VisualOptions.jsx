@@ -1,6 +1,8 @@
 import React from 'react'
-import styles from './VisualOptions.css'
+
 import VisualOptionsItem from './VisualOptionsItem'
+
+import styles from './VisualOptions.css'
 
 class VisualOptions extends React.Component {
   focus() {
@@ -26,27 +28,29 @@ class VisualOptions extends React.Component {
       <div className={styles.container}>
         {options && (
           <div className={`${styles.grid} ${extraClasses.join(' ')}`}>
-            {Object.keys(options).map((k, i) => (
-              <VisualOptionsItem
-                key={k}
-                {...options[k]}
-                selected={k == value || (options[k].default && value == undefined)}
-                showLabel={showLabel}
-                showLabelAsTooltip={showTooltip}
-                value={k}
-                ref={(element) =>
-                  !this.inputElement && (k == value || (value == undefined && i == 0))
-                    ? (this.inputElement = element)
-                    : null
-                }
-                onChange={() => onChange(k)}
-              />
-            ))}
+            {Object.keys(options)
+              .filter((k) => !options[k]?.hidden)
+              .map((k, i) => (
+                <VisualOptionsItem
+                  key={k}
+                  {...options[k]}
+                  selected={k == value || (options[k].default && value == undefined)}
+                  showLabel={showLabel}
+                  showLabelAsTooltip={showTooltip}
+                  value={k}
+                  ref={(element) =>
+                    !this.inputElement && (k == value || (value == undefined && i == 0))
+                      ? (this.inputElement = element)
+                      : null
+                  }
+                  onChange={() => onChange(k)}
+                />
+              ))}
           </div>
         )}
         {!options && (
           <div className={styles.error}>
-            Options must be an array with at least a value for `key`
+            Options must be an object with at least one key and an icon for each option
           </div>
         )}
       </div>

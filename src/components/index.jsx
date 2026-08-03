@@ -1,6 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 import {FormField, set, unset} from 'sanity'
+
+import {getVisualOptionsFromSchemaType} from '../normalizeVisualOptionsSchema'
 import VisualOptions from './VisualOptions'
 
 const createPatchFrom = (value) => {
@@ -31,11 +33,11 @@ class VisualOptionsContainer extends React.Component {
         level={level}
       >
         <VisualOptions
-          options={type.options.list}
-          showLabel={type.options.showLabel}
-          showTooltip={type.options.showTooltip}
-          size={type.options.optionSize}
-          shape={type.options.shape}
+          options={getVisualOptionsFromSchemaType(type)}
+          showLabel={type.options?.showLabel}
+          showTooltip={type.options?.showTooltip}
+          size={type.options?.optionSize}
+          shape={type.options?.shape}
           value={value}
           ref={(element) => (this.inputElement ? null : (this.inputElement = element))}
           onChange={(item) => this.selectItem(item)}

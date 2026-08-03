@@ -22,7 +22,6 @@ Or, also for color options:
 
 See code at [over here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/color-list.jsx) for how to implement a color list.
 
-
 ## Installation
 
 From the terminal within the Sanity Studio directory:
@@ -34,13 +33,11 @@ npm install sanity-plugin-visual-options
 Then add the plugin to your sanity.config.js/ts file:
 
 ```javascript
-import { visualOptions } from "sanity-plugin-visual-options";
+import {visualOptions} from 'sanity-plugin-visual-options'
 
 export default defineConfig({
   // ...
-  plugins: [
-    visualOptions(),
-  ]
+  plugins: [visualOptions()],
 })
 ```
 
@@ -48,7 +45,7 @@ export default defineConfig({
 
 Schema to produce the above screenshot can be found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/hero-schema.js) with the icons found [here](https://github.com/fractaldimensions/sanity-plugin-visual-options/blob/next/examples/icons.jsx)
 
-In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component. 
+In your schema, you should add a field of type 'visualOptions', and the options property should contain a key of 'list'. Within this is another dictionary, with the key being the reference that will be saved against the item. Each item must contain an icon as a minimum, which is a React Component.
 
 In the example below, which produced the image above with small options, the icons are simple React components returning an SVG, therefore react-icons should work here too.
 
@@ -110,7 +107,7 @@ Within the `options` for the schema, there are the following options:
 
 ## Layout Options
 
-## Small 
+## Small
 
 <img alt="preview of small with tooltip" src="https://github.com/fractaldimensions/sanity-plugin-visual-options/raw/next/images/preview-small.png" style="width: 530px; max-width: 100%;">
 
