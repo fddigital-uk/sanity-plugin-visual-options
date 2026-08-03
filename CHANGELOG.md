@@ -2,6 +2,35 @@
 
 Notable changes are within this log. Not all patch releases will be detailed, see commit history for a greater insight.
 
+## 3.0.0 - 3rd August 2026
+
+This is a major release. Existing schemas using `options.list` as an object should continue to work, but the plugin now normalises schema options internally and registers studio layout middleware. Test copy/paste, document duplication, and studio startup carefully after upgrading.
+
+### Breaking changes
+
+- **Node.js**: requires `>=20.19 <22 || >=22.12`
+- **Sanity**: peer dependency now includes Sanity v6 (`^3.0.0 || ^4.0.0-0 || ^5.0.0 || ^6.0.0-0`)
+- **React**: peer dependency now includes React 19
+- **Build output**: plugin is built with `@sanity/pkg-utils` as ESM; consumers linking or bundling the package should use the published `dist` entry (or the `source` export in development)
+- **Plugin behaviour**: registers a studio layout component to patch compiled schema types at runtime. Unlikely to conflict with other plugins, but worth verifying if you use custom studio layout middleware
+
+### Bug fixes
+
+- **Copy/paste and document copy**: fixes `targetSchemaType.options?.list?.map is not a function` when copying or pasting documents/fields that contain `visualOptions` fields. Sanity's copy/paste logic expects `options.list` to be an array; this plugin uses an object dictionary for icons and labels. The plugin now normalises field options so copy/paste works while preserving the visual option config
+
+### Features
+
+- Schema normalisation converts object-style `options.list` values into:
+  - `options.visualOptions` — the original icon/label object used by the input component
+  - `options.list` — a Sanity-compatible `[{title, value}, ...]` array for studio internals such as copy/paste validation
+
+### Maintenance
+
+- Migrated build and release tooling to `@sanity/pkg-utils` and `@sanity/plugin-kit` v10
+- Replaced Prettier/ESLint with `oxfmt` and `oxlint`
+- Updated dev dependencies for Sanity 6, React 19, and TypeScript 7
+- Dark mode text visibility fix for option labels
+
 ## 0.8.3 - 9th November 2020
 
 ### Bug Fixes

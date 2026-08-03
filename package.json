@@ -54,9 +54,9 @@
   "devDependencies": {
     "@sanity/browserslist-config": "^1.0.5",
     "@sanity/pkg-utils": "^11.0.17",
-    "@sanity/plugin-kit": "^9.0.3",
+    "@sanity/plugin-kit": "^10.0.3",
     "@types/react": "^19.2.18",
-    "oxfmt": "^0.62.0",
+    "oxfmt": "^0.61.0",
     "oxlint": "^1.77.0",
     "oxlint-tsgolint": "^7.0.2001",
     "react": "^19.2.8",
